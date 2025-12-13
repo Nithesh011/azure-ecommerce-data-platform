@@ -1,4 +1,4 @@
-# 🟦 Azure E-Commerce Data Platform (Batch + Real-Time)
+# 🟦 Azure E-Commerce Data Platform (Batch + real time)
 
 <p align="center">
   <img src="https://img.shields.io/badge/Azure-Cloud-blue?logo=microsoftazure&logoColor=white" alt="Azure"/>
@@ -13,13 +13,13 @@
 ## 📌 Project Overview
 
 This project implements a real world e-commerce data platform using Azure services.  
-It includes both **batch ingestion** and **real-time streaming** ingestion and follows the **Medallion Architecture** (RAW → BRONZE → SILVER → GOLD).
+It includes both **batch ingestion** and **real time streaming** ingestion and follows the **Medallion Architecture** (RAW → BRONZE → SILVER → GOLD).
 
 The data source is **FakeStore API**, and the platform ingests:
 
 - Products (batch)
 - Users (batch)
-- Carts/Orders (real-time streaming via Event Hub)
+- Carts/Orders (real time streaming via Event Hub)
 
 This project demonstrates end-to-end Data Engineering skills:  
 ✔ Ingestion  
