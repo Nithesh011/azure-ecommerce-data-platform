@@ -138,7 +138,7 @@ Your project required multiple permissions:
 
 ## 🧩 Challenges (summarized)
 
-A full list is in `challenges.md`, but key items include:
+A full list is in [`challenges.md`](challenges.md), but key items include:
 
 - 🔸 Event Hub "Unauthorized" Error → Solved by moving access policy from Namespace level to Entity level.
 - 🔸 Notebook Not Appearing in ADF → Solved by assigning ADF service principal Synapse Administrator + Spark Administrator roles.
