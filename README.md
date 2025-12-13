@@ -58,12 +58,37 @@ This project demonstrates end-to-end Data Engineering skills:
 ```
 azure-ecommerce-data-platform/
 │
-├── architecture/
-├── notebooks/
-├── screenshots/
-├── pipelines/
-├── challenges.md
-└── README.md
+├── architecture/          # Architecture diagrams (PNG files)
+│   ├── high_level_architecture.png
+│   ├── medallion_architecture.png
+│   ├── streaming_flow.png
+│   └── orchestration_flow.png
+│
+├── notebooks/             # Synapse Spark notebooks
+│   ├── 01_nb_bronze_batch_load.ipynb
+│   ├── 02_nb_bronze_stream_load.ipynb
+│   ├── 03_nb_silver_transform.ipynb
+|   ├── 04_nb_silver_order_details.ipynb
+│   └── 05_nb_gold_metrics.ipynb
+│   # (Add any streaming notebooks if present)
+│
+├── screenshots/           # Project screenshots
+│   ├── adf_pipeline.png
+│   ├── adf_synapse_orchestration.png.png
+│   ├── logicapp_designer.png
+│   ├── logicapp_runhistory.png
+│   ├── eventhub_dashboard.png
+│   ├── synapse_notebooks.png
+│   ├── bronze_stream_folder.png
+│   ├── silver_layer_preview.png
+│   └── gold_layer_preview.png
+│
+├── pipelines/             # ADF ARM templates (JSON)
+│   ├── PL_FakeStore_Ingestion.json
+│   └── PL_Synapse_Notebook_Runner.json
+│
+├── challenges.md          # Challenges & solutions document
+└── README.md              # Project documentation
 
 ```
 ---
