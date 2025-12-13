@@ -12,7 +12,7 @@
 
 ## 📌 Project Overview
 
-This project implements a real-world e-commerce data platform using Azure services.  
+This project implements a real world e-commerce data platform using Azure services.  
 It includes both **batch ingestion** and **real-time streaming** ingestion and follows the **Medallion Architecture** (RAW → BRONZE → SILVER → GOLD).
 
 The data source is **FakeStore API**, and the platform ingests:
