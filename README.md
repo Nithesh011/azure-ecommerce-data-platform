@@ -39,7 +39,7 @@ This project demonstrates end-to-end Data Engineering skills:
 ## 🧱 Medallion Architecture
 
 <p align="center">
-  <img src="architecture/medallion_architecture.png" width="600" alt="Medallion Architecture"/>
+  <img src="architecture/medallion_architecture.png" width="100" alt="Medallion Architecture"/>
 </p>
 
 ## ⚡ Streaming Architecture
