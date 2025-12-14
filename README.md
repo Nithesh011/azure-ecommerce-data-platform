@@ -33,25 +33,25 @@ This project demonstrates end-to-end Data Engineering skills:
 ## 🏗 High-Level Architecture
 
 <p align="center">
-  <img src="architecture/high_level_architecture.png" width="600" alt="High-Level Architecture"/>
+  <img src="architecture/high_level_architecture.png" width="250" alt="High-Level Architecture"/>
 </p>
 
 ## 🧱 Medallion Architecture
 
 <p align="center">
-  <img src="architecture/medallion_architecture.png" width="100" alt="Medallion Architecture"/>
+  <img src="architecture/medallion_architecture.png" width="250" alt="Medallion Architecture"/>
 </p>
 
 ## ⚡ Streaming Architecture
 
 <p align="center">
-  <img src="architecture/streaming_flow.png" width="500" alt="Streaming Architecture"/>
+  <img src="architecture/streaming_flow.png" width="250" alt="Streaming Architecture"/>
 </p>
 
 ## 🔄 Notebook Orchestration Flow
 
 <p align="center">
-  <img src="architecture/orchestration_flow.png" width="500" alt="Notebook Orchestration Flow"/>
+  <img src="architecture/orchestration_flow.png" width="250" alt="Notebook Orchestration Flow"/>
 </p>
 
 ## 📁 Repository Structure
