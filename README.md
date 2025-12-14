@@ -94,8 +94,6 @@ azure-ecommerce-data-platform/
 ```
 ```
 
----
-
 ## 📥 Batch Ingestion (ADF)
 
 ✅ **ADF Pipeline: PL_FakeStore_Ingestion**  
