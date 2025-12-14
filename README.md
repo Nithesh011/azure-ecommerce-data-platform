@@ -1,4 +1,4 @@
-# 🟦 Azure E-Commerce Data Platform (Batch + real time)
+# 🟦 Azure E-Commerce Data Platform (Batch + Real-Time)
 
 <p align="center">
   <img src="https://img.shields.io/badge/Azure-Cloud-blue?logo=microsoftazure&logoColor=white" alt="Azure"/>
@@ -12,14 +12,14 @@
 
 ## 📌 Project Overview
 
-This project implements a real world e-commerce data platform using Azure services.  
-It includes both **batch ingestion** and **real time streaming** ingestion and follows the **Medallion Architecture** (RAW → BRONZE → SILVER → GOLD).
+This project implements a real-world e-commerce data platform using Azure services.  
+It includes both **batch ingestion** and **real-time streaming** ingestion and follows the **Medallion Architecture** (RAW → BRONZE → SILVER → GOLD).
 
 The data source is **FakeStore API**, and the platform ingests:
 
 - Products (batch)
 - Users (batch)
-- Carts/Orders (real time streaming via Event Hub)
+- Carts/Orders (real-time streaming via Event Hub)
 
 This project demonstrates end-to-end Data Engineering skills:  
 ✔ Ingestion  
@@ -58,7 +58,7 @@ This project demonstrates end-to-end Data Engineering skills:
 ```
 azure-ecommerce-data-platform/
 │
-├── architecture/          # Architecture diagrams (PNG files)
+├── architecture/          # Architecture diagrams
 │   ├── high_level_architecture.png
 │   ├── medallion_architecture.png
 │   ├── streaming_flow.png
@@ -68,22 +68,23 @@ azure-ecommerce-data-platform/
 │   ├── 01_nb_bronze_batch_load.ipynb
 │   ├── 02_nb_bronze_stream_load.ipynb
 │   ├── 03_nb_silver_transform.ipynb
-|   ├── 04_nb_silver_order_details.ipynb
+│   ├── 04_nb_silver_order_details.ipynb
 │   └── 05_nb_gold_metrics.ipynb
-│   # (Add any streaming notebooks if present)
 │
 ├── screenshots/           # Project screenshots
 │   ├── adf_pipeline.png
-│   ├── adf_synapse_orchestration.png.png
+│   ├── adf_synapse_orchestration.png
+│   ├── adls_foldertree.png
+│   ├── bronze_stream_folder.png
+│   ├── eventhub_dashboard.png
+│   ├── gold_layer_preview.png
 │   ├── logicapp_designer.png
 │   ├── logicapp_runhistory.png
-│   ├── eventhub_dashboard.png
-│   ├── synapse_notebooks.png
-│   ├── bronze_stream_folder.png
 │   ├── silver_layer_preview.png
-│   └── gold_layer_preview.png
+│   ├── synapse_notebooks.png
+│   └── synapse_stream_output.png
 │
-├── pipelines/             # ADF ARM templates (JSON)
+├── pipelines/             # ADF ARM templates
 │   ├── PL_FakeStore_Ingestion.json
 │   └── PL_Synapse_Notebook_Runner.json
 │
@@ -91,6 +92,8 @@ azure-ecommerce-data-platform/
 └── README.md              # Project documentation
 
 ```
+```
+
 ---
 
 ## 📥 Batch Ingestion (ADF)
@@ -106,8 +109,9 @@ from FakeStore API and stores them in:
 /raw/fakestore/products
 /raw/fakestore/users
 
+
 <p align="center">
-  <img src="screenshots/adf_pipeline.png" width="700" alt="ADF Orchestration Pipeline"/>
+  <img src="screenshots/adf_pipeline.png" width="700" alt="ADF Pipeline"/>
 </p>
 
 ## 🔐 Azure Role Assignments (Very Important)
@@ -138,31 +142,29 @@ Your project required multiple permissions:
 
 ## 🧩 Challenges (summarized)
 
-A full list is in [`challenges.md`](challenges.md), but key items include:
-
-- 🔸 Event Hub "Unauthorized" Error → Solved by moving access policy from Namespace level to Entity level.
-- 🔸 Notebook Not Appearing in ADF → Solved by assigning ADF service principal Synapse Administrator + Spark Administrator roles.
-- 🔸 Streaming JSON Flattening → Fixed using `explode(col("products"))`
+A full list is in [`challenges.md`](challenges.md), but key items include:  
+- 🔸 Event Hub "Unauthorized" Error → Solved by moving access policy from Namespace level to Entity level.  
+- 🔸 Notebook Not Appearing in ADF → Solved by assigning ADF service principal Synapse Administrator + Spark Administrator roles.  
+- 🔸 Streaming JSON Flattening → Fixed using `explode(col("products"))`  
 - 🔸 Join type mismatch in Silver layer → Resolved by casting `col("product_id").cast("int")`
 
 ## 🧪 How to Run This Project
 
-1. Deploy ADLS Gen2 → Create container `datalake` with folders: `raw/`, `bronze/`, `silver/`, `gold/`
-2. Deploy ADF and configure linked services.
-3. Deploy Logic App (1-minute recurrence).
-4. Deploy Event Hub (1 consumer group).
-5. Deploy Synapse Workspace + Spark Pool.
-6. Upload all notebooks.
-7. Create Notebook Orchestration ADF Pipeline.
+1. Deploy ADLS Gen2 → Create container `datalake` with folders: `raw/`, `bronze/`, `silver/`, `gold/`  
+2. Deploy ADF and configure linked services.  
+3. Deploy Logic App (1-minute recurrence).  
+4. Deploy Event Hub (1 consumer group).  
+5. Deploy Synapse Workspace + Spark Pool.  
+6. Upload all notebooks.  
+7. Create Notebook Orchestration ADF Pipeline.  
 8. Check Bronze → Silver → Gold outputs.
 
 ## 🏁 Conclusion
 
-This project demonstrates:
-
-- Batch & streaming ingestion
-- ADLS Medallion architecture
-- Spark-based transformations
-- Event-driven design
-- Data engineering best practices
+This project demonstrates:  
+- Batch & streaming ingestion  
+- ADLS Medallion architecture  
+- Spark-based transformations  
+- Event-driven design  
+- Data engineering best practices  
 - Production-grade Azure setup
