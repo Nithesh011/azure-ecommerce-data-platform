@@ -55,6 +55,7 @@ This project demonstrates end-to-end Data Engineering skills:
 </p>
 
 ## 📁 Repository Structure
+```
 azure-ecommerce-data-platform/
 │
 ├── architecture/          # Architecture diagrams
@@ -89,7 +90,8 @@ azure-ecommerce-data-platform/
 │
 ├── challenges.md          # Challenges & solutions document
 └── README.md              # Project documentation
-
+```
+---
 
 ## 📥 Batch Ingestion (ADF)
 
