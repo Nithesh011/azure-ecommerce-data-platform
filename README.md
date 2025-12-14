@@ -13,7 +13,7 @@
 ## 📌 Project Overview
 
 This project implements a real-world e-commerce data platform using Azure services.  
-It includes both **batch ingestion** and **real-time streaming** ingestion and follows the **Medallion Architecture** (RAW → BRONZE → SILVER → GOLD).
+It includes both **batch ingestion** and **real time streaming** ingestion and follows the **Medallion Architecture** (RAW → BRONZE → SILVER → GOLD).
 
 The data source is **FakeStore API**, and the platform ingests:
 
@@ -33,29 +33,28 @@ This project demonstrates end-to-end Data Engineering skills:
 ## 🏗 High-Level Architecture
 
 <p align="center">
-  <img src="architecture/high_level_architecture.png" width="800" alt="High-Level Architecture"/>
+  <img src="architecture/high_level_architecture.png" width="600" alt="High-Level Architecture"/>
 </p>
 
 ## 🧱 Medallion Architecture
 
 <p align="center">
-  <img src="architecture/medallion_architecture.png" width="800" alt="Medallion Architecture"/>
+  <img src="architecture/medallion_architecture.png" width="600" alt="Medallion Architecture"/>
 </p>
 
 ## ⚡ Streaming Architecture
 
 <p align="center">
-  <img src="architecture/streaming_flow.png" width="800" alt="Streaming Architecture"/>
+  <img src="architecture/streaming_flow.png" width="500" alt="Streaming Architecture"/>
 </p>
 
 ## 🔄 Notebook Orchestration Flow
 
 <p align="center">
-  <img src="architecture/orchestration_flow.png" width="800" alt="Notebook Orchestration Flow"/>
+  <img src="architecture/orchestration_flow.png" width="500" alt="Notebook Orchestration Flow"/>
 </p>
 
 ## 📁 Repository Structure
-```
 azure-ecommerce-data-platform/
 │
 ├── architecture/          # Architecture diagrams
@@ -91,8 +90,6 @@ azure-ecommerce-data-platform/
 ├── challenges.md          # Challenges & solutions document
 └── README.md              # Project documentation
 
-```
-```
 
 ## 📥 Batch Ingestion (ADF)
 
@@ -109,7 +106,7 @@ from FakeStore API and stores them in:
 
 
 <p align="center">
-  <img src="screenshots/adf_pipeline.png" width="700" alt="ADF Pipeline"/>
+  <img src="screenshots/adf_pipeline.png" width="600" alt="ADF Pipeline"/>
 </p>
 
 ## 🔐 Azure Role Assignments (Very Important)
